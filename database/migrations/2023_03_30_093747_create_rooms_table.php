@@ -21,10 +21,10 @@ return new class extends Migration
                 ->default(false);
 
             $table->timestamp('starts_at')
-                ->useCurrent();
+                ->nullable();
 
             $table->timestamp('ends_at')
-                ->useCurrent();
+                ->nullable();
 
             $table->foreignIdFor(Hotel::class)
                 ->constrained()

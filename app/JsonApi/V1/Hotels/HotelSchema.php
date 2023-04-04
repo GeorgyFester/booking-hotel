@@ -17,6 +17,8 @@ class HotelSchema extends Schema
 {
     public static string $model = Hotel::class;
 
+    protected int $maxDepth = 3;
+
     public function fields(): array
     {
         return [

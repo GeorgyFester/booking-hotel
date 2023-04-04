@@ -18,12 +18,14 @@ class RoomSchema extends Schema
 {
     public static string $model = Room::class;
 
+    protected int $maxDepth = 3;
+
     public function fields(): array
     {
         return [
             ID::make(),
             Number::make('room_number'),
-            BelongsTo::make('hotel_id')->type('hotels')->readOnly(),
+            BelongsTo::make('hotel')->readOnly(),
             Str::make('description'),
             Number::make('number_of_beds')->sortable(),
             Boolean::make('is_booked'),

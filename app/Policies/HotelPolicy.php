@@ -13,9 +13,6 @@ class HotelPolicy
         return true;
     }
 
-    /**
-     * Determine whether the user can view the model.
-     */
     public function view(?User $user, Hotel $hotel): bool
     {
         return true;
@@ -26,41 +23,26 @@ class HotelPolicy
         return $this->view($user, $hotel);
     }
 
-    /**
-     * Determine whether the user can create models.
-     */
     public function create(?User $user): bool
     {
         //
     }
 
-    /**
-     * Determine whether the user can update the model.
-     */
     public function update(?User $user, Hotel $hotel): bool
     {
         //
     }
 
-    /**
-     * Determine whether the user can delete the model.
-     */
     public function delete(?User $user, Hotel $hotel): bool
     {
         //
     }
 
-    /**
-     * Determine whether the user can restore the model.
-     */
     public function restore(?User $user, Hotel $hotel): bool
     {
         //
     }
 
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
     public function forceDelete(?User $user, Hotel $hotel): bool
     {
         //
