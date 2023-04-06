@@ -12,6 +12,12 @@ use LaravelJsonApi\Laravel\Http\Controllers\Actions;
 use LaravelJsonApi\Laravel\Http\Requests\AnonymousQuery;
 use LaravelJsonApi\Core\Responses\DataResponse;
 
+/**
+ * @group Room management
+ *
+ * APIs for managing rooms
+ */
+
 class RoomController extends Controller
 {
 

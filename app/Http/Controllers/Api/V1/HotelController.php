@@ -5,6 +5,12 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use LaravelJsonApi\Laravel\Http\Controllers\Actions;
 
+/**
+ * @group Hotel management
+ *
+ * APIs for managing hotels
+ */
+
 class HotelController extends Controller
 {
 

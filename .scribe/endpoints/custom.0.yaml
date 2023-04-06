@@ -1,0 +1,53 @@
+# To include an endpoint that isn't a part of your Laravel app (or belongs to a vendor package),
+# you can define it in a custom.*.yaml file, like this one.
+# Each custom file should contain an array of endpoints. Here's an example:
+# See https://scribe.knuckles.wtf/laravel/documenting/custom-endpoints#extra-sorting-groups-in-custom-endpoint-files for more options
+
+- httpMethods:
+    - PATCH
+  uri: api/v1/rooms/{room}/booking
+  metadata:
+    groupName: Room management
+    groupDescription: ''
+    subgroup: ''
+    title: Booking room
+    description: ''
+    authenticated: false
+  headers:
+    Content-Type: application/vnd.api+json
+    Accept: application/vnd.api+json
+  urlParameters:
+    id:
+      name: id
+      description: 'The ID of the room.'
+      required: true
+      example: 2
+      type: integer
+  queryParameters:
+    include:
+      name: include
+      description: Includes relationships in response.
+      required: false
+      example: hotel
+      type: string
+  bodyParameters:
+    something:
+      name: something
+      description: The things we should do.
+      required: true
+      example:
+        - string 1
+        - string 2
+      type: 'string[]'
+  responses:
+    - status: 200
+      description: 'When the thing was done smoothly.'
+      content: # Your response content can be an object, an array, a string or empty.
+         {
+           "hey": "ho ho ho"
+         }
+  responseFields:
+    hey:
+      name: hey
+      description: Who knows?
+      type: string # This is optional
